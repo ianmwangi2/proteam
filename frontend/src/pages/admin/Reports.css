@@ -1,0 +1,34 @@
+/* ── Reports ───────────────────────────────────────────── */
+.rpt-summary-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px; }
+.rpt-summary-card { display: flex; flex-direction: column; gap: 6px; }
+.rpt-summary-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-text-muted); }
+.rpt-summary-val { font-size: 1.75rem; font-weight: 800; }
+
+.rpt-charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.rpt-chart-card { overflow: hidden; }
+.rpt-chart-title { font-size: 0.9375rem; font-weight: 700; margin: 0 0 16px; }
+
+.rpt-prod-table { margin-top: 8px; }
+.rpt-prod-header,
+.rpt-prod-row {
+  display: grid; grid-template-columns: 40px 2fr 1fr 1.2fr;
+  gap: 14px; align-items: center; padding: 12px 0;
+}
+.rpt-prod-header {
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.7rem; font-weight: 700; color: var(--color-text-muted);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.rpt-prod-row { border-bottom: 1px solid var(--color-border); }
+.rpt-prod-row:last-child { border-bottom: none; }
+.rpt-rank {
+  width: 26px; height: 26px; border-radius: 50%; color: #000;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 800;
+}
+.rpt-prod-name { font-size: 0.9375rem; }
+
+@media (max-width: 1024px) {
+  .rpt-summary-row { grid-template-columns: repeat(2, 1fr); }
+  .rpt-charts-row { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,116 @@
+.about-hero {
+  background: linear-gradient(180deg, rgba(29,107,62,0.08) 0%, var(--color-bg-primary) 100%);
+  border-bottom: 1px solid rgba(29,107,62,0.1);
+  padding: var(--spacing-2xl) 0 var(--spacing-xl);
+}
+.about-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-hero-title { font-size: 3rem; font-weight: 900; margin-bottom: 8px; font-family: var(--font-display); }
+.about-hero-since {
+  font-size: 0.75rem; font-weight: 700;
+  background: linear-gradient(90deg, var(--brand-green-bright) 0%, var(--brand-blue-mid) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.1em; margin-bottom: 16px;
+}
+.about-hero-desc { font-size: 1.0625rem; color: var(--color-text-secondary); line-height: 1.7; margin: 0 0 12px; }
+.about-hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.about-stat { text-align: center; border: 1px solid rgba(29,107,62,0.12); border-radius: var(--radius-lg); transition: all var(--transition-normal); }
+.about-stat:hover { border-color: rgba(29,107,62,0.25); transform: translateY(-2px); }
+.about-stat-val {
+  display: block; font-size: 2rem; font-weight: 900;
+  font-family: var(--font-display);
+  background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--brand-green-bright) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.about-stat-label { font-size: 0.8125rem; color: var(--color-text-secondary); }
+
+/* Mission/Vision */
+.mv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg); }
+.mv-card { display: flex; flex-direction: column; gap: var(--spacing-sm); transition: all var(--transition-normal); }
+.mv-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+.mv-card h3 { font-size: 1.125rem; font-weight: 700; }
+.mv-card p { margin: 0; font-size: 0.9375rem; color: var(--color-text-secondary); line-height: 1.6; }
+
+/* Values */
+.value-card { display: flex; flex-direction: column; gap: var(--spacing-sm); transition: all var(--transition-normal); }
+.value-card:hover { transform: translateY(-2px); }
+.value-icon { font-size: 2rem; margin-bottom: var(--spacing-sm); }
+.value-card h4 { font-size: 1.0625rem; font-weight: 700; }
+
+/* Team */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-sm);
+  max-width: 320px;
+  transition: all var(--transition-normal);
+}
+.team-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
+
+.team-avatar-initials {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-blue) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-sm);
+  border: 3px solid rgba(52,199,110,0.2);
+  box-shadow: 0 0 24px rgba(29,107,62,0.25);
+  font-family: var(--font-display);
+}
+
+.team-name { font-size: 1.125rem; font-weight: 700; }
+
+/* Clients */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.client-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80px;
+  border: 1px solid rgba(29,107,62,0.1);
+  transition: all var(--transition-normal);
+}
+.client-card:hover {
+  border-color: rgba(29,107,62,0.25);
+  background: rgba(29,107,62,0.05);
+  transform: translateY(-2px);
+}
+
+.client-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* CTA section */
+.about-cta-section {
+  background: linear-gradient(135deg, rgba(29,107,62,0.1) 0%, #080f0b 50%, rgba(46,148,209,0.06) 100%);
+  border-top: 1px solid rgba(29,107,62,0.15);
+}
+
+@media (max-width: 900px) {
+  .about-hero-inner { grid-template-columns: 1fr; }
+  .about-hero-stats { grid-template-columns: repeat(4, 1fr); }
+  .mv-grid { grid-template-columns: 1fr; }
+  .clients-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .about-hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .clients-grid { grid-template-columns: 1fr; }
+}

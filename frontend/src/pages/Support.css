@@ -1,0 +1,27 @@
+.support-hero { background: linear-gradient(180deg, #0a150a 0%, var(--color-bg-primary) 100%); border-bottom: 1px solid var(--color-border); padding: var(--spacing-2xl) 0 var(--spacing-xl); }
+.support-hero h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0; }
+.support-search-bar { display: flex; align-items: center; gap: 12px; background: var(--color-bg-input); border: 1px solid var(--color-border-strong); border-radius: var(--radius-lg); padding: 14px 20px; max-width: 640px; transition: border-color var(--transition-fast); }
+.support-search-bar:focus-within { border-color: var(--color-green-primary); box-shadow: 0 0 0 3px var(--color-green-glow); }
+.support-search-input { flex: 1; background: none; border: none; outline: none; font-family: var(--font-family); font-size: 1rem; color: var(--color-text-primary); }
+.support-search-input::placeholder { color: var(--color-text-muted); }
+.support-layout { display: grid; grid-template-columns: 1fr 320px; gap: var(--spacing-2xl); align-items: start; }
+.support-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg); }
+.support-option-card { display: flex; flex-direction: column; }
+.faq-list { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+.faq-item { overflow: hidden; }
+.faq-question { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 18px 20px; background: none; border: none; font-family: var(--font-family); font-size: 0.9375rem; font-weight: 600; color: var(--color-text-primary); cursor: pointer; text-align: left; transition: color var(--transition-fast); }
+.faq-question:hover { color: var(--color-green-primary); }
+.faq-answer { padding: 0 20px 18px; font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.7; margin: 0; border-top: 1px solid var(--color-border); padding-top: 14px; }
+.support-sidebar { position: sticky; top: calc(var(--navbar-height) + 20px); }
+.tickets-panel { overflow: hidden; }
+.ticket-row { padding: 16px 20px; }
+@media (max-width: 900px) { .support-layout { grid-template-columns: 1fr; } .support-sidebar { position: static; } .support-options { grid-template-columns: 1fr; } }
+
+/* Ticket Modal */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.modal-content { width: 100%; max-width: 500px; padding: 0; overflow: hidden; }
+.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid var(--color-border); }
+.modal-header h3 { margin: 0; font-size: 1.125rem; }
+.ticket-form { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+.ticket-form label { display: flex; flex-direction: column; gap: 6px; }
+.ticket-form .text-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }

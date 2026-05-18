@@ -1,0 +1,65 @@
+/* ── Users ─────────────────────────────────────────────── */
+.usr-summary-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px; }
+.usr-summary-card { display: flex; flex-direction: column; gap: 6px; }
+.usr-summary-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-text-muted); }
+.usr-summary-val { font-size: 1.75rem; font-weight: 800; }
+
+.usr-toolbar { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.usr-search-wrap { display: flex; align-items: center; gap: 12px; background: var(--color-bg-input); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 10px 16px; }
+.usr-search { flex: 1; background: none; border: none; outline: none; font-family: var(--font-family); font-size: 0.9375rem; color: var(--color-text-primary); }
+.usr-search::placeholder { color: var(--color-text-muted); }
+
+.usr-table { overflow: hidden; }
+.usr-table-header,
+.usr-table-row {
+  display: grid;
+  grid-template-columns: 2fr 0.9fr 1fr 1fr 0.6fr 1.1fr 0.8fr;
+  gap: 14px; align-items: center; padding: 14px 20px;
+}
+.usr-table-header {
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.7rem; font-weight: 700; color: var(--color-text-muted);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.usr-table-row { border-bottom: 1px solid var(--color-border); transition: background var(--transition-fast); }
+.usr-table-row:last-child { border-bottom: none; }
+.usr-table-row:hover { background: var(--color-bg-card-hover); }
+
+.usr-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--color-green-primary); color: #000;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 800; flex-shrink: 0;
+}
+
+.usr-role-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: var(--radius-full);
+  border: 1px solid; font-size: 0.75rem; font-weight: 600; white-space: nowrap;
+}
+.usr-role-badge.role-admin  { color: #a855f7; border-color: #a855f733; background: #a855f710; }
+.usr-role-badge.role-customer { color: #3b82f6; border-color: #3b82f633; background: #3b82f610; }
+
+.usr-status-dot {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.75rem; font-weight: 600;
+}
+.usr-status-dot.active { color: var(--color-green-primary); }
+.usr-status-dot.inactive { color: #ef4444; }
+
+.usr-empty { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 48px; color: var(--color-text-muted); }
+
+@media (max-width: 1024px) {
+  .usr-summary-row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .usr-table-header, .usr-table-row {
+    grid-template-columns: 2fr 0.9fr 1fr 0.8fr; gap: 10px; padding: 12px 14px;
+  }
+  .usr-table-header > :nth-child(4),
+  .usr-table-row > :nth-child(4),
+  .usr-table-header > :nth-child(5),
+  .usr-table-row > :nth-child(5),
+  .usr-table-header > :nth-child(6),
+  .usr-table-row > :nth-child(6) { display: none; }
+}

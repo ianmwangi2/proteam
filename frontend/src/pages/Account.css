@@ -1,0 +1,78 @@
+/* ── Auth Form ────────────────────────────────────────────── */
+.auth-container { display: flex; justify-content: center; padding: var(--spacing-xl) 0; }
+.auth-card { max-width: 440px; width: 100%; }
+.auth-header { text-align: center; margin-bottom: var(--spacing-lg); }
+.auth-logo { margin-bottom: var(--spacing-sm); }
+.auth-title { font-size: 1.5rem; font-weight: 800; margin: 0 0 6px; }
+.auth-subtitle { font-size: 0.875rem; color: var(--color-text-secondary); margin: 0; }
+.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 4px; margin-bottom: var(--spacing-lg); }
+.auth-tab { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px; border: none; border-radius: calc(var(--radius-md) - 2px); background: transparent; color: var(--color-text-secondary); font-family: var(--font-family); font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: all var(--transition-fast); }
+.auth-tab.active { background: var(--color-green-primary); color: #fff; }
+.auth-tab:not(.active):hover { background: var(--color-green-subtle); color: var(--color-green-primary); }
+.auth-form { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.auth-field label { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--color-text-secondary); margin-bottom: 6px; }
+.auth-input-wrap { position: relative; }
+.auth-input-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--color-text-muted); pointer-events: none; }
+.auth-input-wrap input { width: 100%; padding: 12px 14px 12px 40px; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-md); color: var(--color-text); font-family: var(--font-family); font-size: 0.9375rem; transition: border-color var(--transition-fast); }
+.auth-input-wrap input:focus { outline: none; border-color: var(--color-green-primary); box-shadow: 0 0 0 3px rgba(34,197,94,0.15); }
+.auth-input-wrap input::placeholder { color: var(--color-text-muted); }
+.auth-submit { margin-top: var(--spacing-sm); padding: 14px; font-size: 1rem; font-weight: 700; }
+.auth-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.auth-error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: var(--color-red); padding: 10px 14px; border-radius: var(--radius-md); font-size: 0.8125rem; font-weight: 500; }
+.auth-success { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: var(--color-green-primary); padding: 10px 14px; border-radius: var(--radius-md); font-size: 0.8125rem; font-weight: 500; }
+.auth-footer-text { text-align: center; font-size: 0.875rem; color: var(--color-text-secondary); margin-top: var(--spacing-md); }
+.auth-link { background: none; border: none; color: var(--color-green-primary); font-family: var(--font-family); font-size: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; padding: 0; }
+.auth-link:hover { color: var(--color-green-accent); }
+
+/* ── Account Dashboard ───────────────────────────────────── */
+.account-page { padding: var(--spacing-2xl) 0 var(--spacing-3xl); }
+.account-layout { display: grid; grid-template-columns: 280px 1fr; gap: var(--spacing-2xl); align-items: start; }
+.account-sidebar { display: flex; flex-direction: column; gap: var(--spacing-md); position: sticky; top: calc(var(--navbar-height) + 20px); }
+.account-profile-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--spacing-sm); }
+.account-avatar { width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 3px solid var(--color-border-strong); margin-bottom: var(--spacing-sm); }
+.account-name { font-size: 1.125rem; font-weight: 800; }
+.account-tier { display: flex; align-items: center; gap: 6px; background: var(--color-green-subtle); border: 1px solid var(--color-border-strong); border-radius: var(--radius-full); padding: 6px 14px; font-size: 0.8125rem; font-weight: 600; color: var(--color-green-primary); margin-top: 4px; }
+.account-nav { overflow: hidden; }
+.account-nav-item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; background: none; border: none; cursor: pointer; font-family: var(--font-family); font-size: 0.9375rem; color: var(--color-text-secondary); transition: all var(--transition-fast); }
+.account-nav-item span { flex: 1; text-align: left; }
+.account-nav-item:hover { background: var(--color-green-subtle); color: var(--color-green-primary); }
+.account-nav-item.active { background: var(--color-green-subtle); color: var(--color-green-primary); }
+.signout-btn { color: var(--color-red) !important; justify-content: center; gap: 8px; }
+.signout-btn:hover { background: rgba(239,68,68,0.1) !important; border-color: rgba(239,68,68,0.3) !important; }
+.account-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-md); }
+.account-stat { text-align: center; }
+.account-stat-val { display: block; font-size: 1.5rem; font-weight: 800; }
+.account-stat-label { font-size: 0.75rem; color: var(--color-text-secondary); }
+.orders-table { overflow: hidden; }
+.orders-header { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto; gap: var(--spacing-md); padding: 12px 20px; border-bottom: 1px solid var(--color-border); font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.orders-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto; gap: var(--spacing-md); padding: 16px 20px; border-bottom: 1px solid var(--color-border); align-items: center; transition: background var(--transition-fast); }
+.orders-row:last-child { border-bottom: none; }
+.orders-row:hover { background: var(--color-bg-card-hover); }
+.order-name-cell { display: flex; align-items: center; gap: var(--spacing-md); }
+@media (max-width: 900px) { .account-layout { grid-template-columns: 1fr; } .account-sidebar { position: static; } .account-stats { grid-template-columns: 1fr 1fr; } .orders-header { display: none; } .orders-row { grid-template-columns: 1fr; } }
+
+/* ── Orders table ──────────────────────────────────────── */
+.acct-orders-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.acct-orders-table th { text-align: left; padding: 10px 14px; font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--color-border); }
+.acct-orders-table td { padding: 14px; border-bottom: 1px solid var(--color-border); vertical-align: middle; }
+.acct-orders-table tbody tr:last-child td { border-bottom: none; }
+.acct-orders-table tbody tr:hover { background: var(--color-bg-card-hover); }
+.acct-status-badge { display: inline-block; padding: 3px 10px; border: 1px solid; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600; text-transform: capitalize; }
+@media (max-width: 640px) {
+  .acct-orders-table th:nth-child(3), .acct-orders-table td:nth-child(3) { display: none; }
+}
+
+/* ── Panel Form ────────────────────────────────────────────── */
+.acct-panel-form { display: flex; flex-direction: column; gap: var(--spacing-md); max-width: 480px; }
+
+/* ── Notification Toggles ──────────────────────────────────── */
+.notif-pref-row { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-md); padding: 16px 0; border-bottom: 1px solid var(--color-border); }
+.notif-pref-row:last-child { border-bottom: none; }
+.notif-toggle { position: relative; width: 44px; height: 24px; border-radius: 12px; border: none; background: var(--color-border-strong); cursor: pointer; transition: background var(--transition-fast); flex-shrink: 0; }
+.notif-toggle.active { background: var(--color-green-primary); }
+.notif-toggle-knob { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; transition: transform var(--transition-fast); }
+.notif-toggle.active .notif-toggle-knob { transform: translateX(20px); }
+
+/* ── Password Toggle ──────────────────────────────────────── */
+.pw-toggle-btn { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--color-text-muted); cursor: pointer; padding: 2px; display: flex; align-items: center; }
+.pw-toggle-btn:hover { color: var(--color-text-secondary); }

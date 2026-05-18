@@ -1,0 +1,22 @@
+/* ── Settings ──────────────────────────────────────────── */
+.stg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.stg-section { display: flex; flex-direction: column; gap: 16px; }
+.stg-section-title { font-size: 1rem; font-weight: 700; margin: 0; }
+
+.stg-field { display: flex; flex-direction: column; gap: 6px; }
+.stg-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-text-muted); }
+.stg-input {
+  background: var(--color-bg-input); border: 1px solid var(--color-border); border-radius: var(--radius-md);
+  padding: 10px 14px; font-size: 0.9375rem; color: var(--color-text-primary); font-family: var(--font-family);
+  outline: none; transition: border-color var(--transition-fast);
+}
+.stg-input:focus { border-color: var(--color-green-primary); }
+
+.stg-save-bar {
+  display: flex; justify-content: flex-end; margin-top: 28px; padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 860px) {
+  .stg-grid { grid-template-columns: 1fr; }
+}
