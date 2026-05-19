@@ -7,7 +7,7 @@ import { useToast } from '../../context/ToastContext';
 import { apiFetch } from '../../config/api';
 import usePageTitle from '../../hooks/usePageTitle';
 import '../AdminDash.css';
-import './OrderDetail.css';
+import './QuotationDetail.css';
 
 const cap = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : '—';
 
