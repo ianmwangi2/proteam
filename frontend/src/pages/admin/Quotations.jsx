@@ -7,7 +7,7 @@ import { useToast } from '../../context/ToastContext';
 import { apiFetch } from '../../config/api';
 import usePageTitle from '../../hooks/usePageTitle';
 import '../AdminDash.css';
-import './Orders.css';
+import './Quotations.css';
 
 const statusOptions = ['All', 'pending', 'quoted', 'accepted', 'declined', 'expired'];
 

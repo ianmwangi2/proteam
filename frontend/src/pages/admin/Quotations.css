@@ -1,0 +1,340 @@
+.quotations-page {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-primary, #fff);
+}
+
+.quotations-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.quotations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color, #e5e7eb);
+}
+
+.quotations-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary, #1f2937);
+}
+
+.quotations-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary, #f9fafb);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 0.375rem;
+}
+
+.search-box svg {
+  width: 18px;
+  height: 18px;
+  color: var(--text-secondary, #6b7280);
+  flex-shrink: 0;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--text-primary, #1f2937);
+}
+
+.search-box input::placeholder {
+  color: var(--text-secondary, #6b7280);
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color, #e5e7eb);
+  background: var(--bg-secondary, #f9fafb);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-primary, #1f2937);
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-color, #2e94d1);
+  background: var(--primary-color, #2e94d110);
+}
+
+.filter-btn.active {
+  background: var(--primary-color, #2e94d1);
+  border-color: var(--primary-color, #2e94d1);
+  color: white;
+}
+
+.quotations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quotation-item {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--bg-secondary, #f9fafb);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.quotation-item:hover {
+  border-color: var(--primary-color, #2e94d1);
+  box-shadow: 0 4px 12px rgba(46, 148, 209, 0.1);
+}
+
+.quotation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.quotation-id {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-color, #2e94d1);
+}
+
+.quotation-customer {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary, #1f2937);
+}
+
+.quotation-email {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.quotation-service {
+  font-size: 0.95rem;
+  color: var(--text-primary, #1f2937);
+  font-weight: 500;
+}
+
+.quotation-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.375rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 2px solid;
+  text-align: center;
+}
+
+.status-badge.pending {
+  background: #f59e0b10;
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.status-badge.quoted {
+  background: #2e94d110;
+  border-color: #2e94d1;
+  color: #2e94d1;
+}
+
+.status-badge.accepted {
+  background: #34c76e10;
+  border-color: #34c76e;
+  color: #34c76e;
+}
+
+.status-badge.declined {
+  background: #f0525210;
+  border-color: #f05252;
+  color: #f05252;
+}
+
+.status-badge.expired {
+  background: #6b728010;
+  border-color: #6b7280;
+  color: #6b7280;
+}
+
+.action-menu {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color, #e5e7eb);
+  background: var(--bg-primary, #fff);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--text-primary, #1f2937);
+}
+
+.action-btn:hover {
+  background: var(--primary-color, #2e94d1);
+  color: white;
+  border-color: var(--primary-color, #2e94d1);
+}
+
+.action-btn.accept {
+  color: #34c76e;
+  border-color: #34c76e;
+}
+
+.action-btn.accept:hover {
+  background: #34c76e;
+  color: white;
+}
+
+.action-btn.decline {
+  color: #f05252;
+  border-color: #f05252;
+}
+
+.action-btn.decline:hover {
+  background: #f05252;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+}
+
+.pagination button,
+.pagination span {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color, #e5e7eb);
+  background: var(--bg-secondary, #f9fafb);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover {
+  border-color: var(--primary-color, #2e94d1);
+  background: var(--primary-color, #2e94d1);
+  color: white;
+}
+
+.pagination .active {
+  background: var(--primary-color, #2e94d1);
+  color: white;
+  border-color: var(--primary-color, #2e94d1);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .quotation-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .quotation-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .action-menu {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .quotations-content {
+    padding: 1rem;
+  }
+
+  .quotations-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .quotations-controls {
+    flex-direction: column;
+  }
+
+  .search-box {
+    min-width: 100%;
+  }
+
+  .filter-group {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .quotation-item {
+    grid-template-columns: 1fr;
+  }
+
+  .quotation-info {
+    grid-template-columns: 1fr;
+  }
+
+  .action-menu {
+    grid-column: 1 / -1;
+  }
+}
